@@ -121,6 +121,14 @@ jobs:
         #sed -i '/自定义项/d' .config
         #echo "自定义项=y" >> .config
         #########################################################################################
+        cd user
+        git init #初始化
+        git remote add origin https://github.com/leafsay/rt-n56u.git # 增加远端的仓库地址
+        git config core.sparsecheckout true # 设置Sparse Checkout 为true 
+        echo "trunk/user/aliddns" >> .git/info/sparse-checkout # 将要部分clone的目录相对根目录的路径写入配置文件
+        #echo "trunk/user/shadowsocks" >> .git/info/sparse-checkout
+        git pull --force --depth 1 origin master
+        
         sudo ./clear_tree
         sudo ./build_firmware_modify $TNAME 0
         sudo mv -f images/*.trx /opt/images/
