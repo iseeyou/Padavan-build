@@ -61,7 +61,11 @@ jobs:
         echo "修改Lan ip"
         sed -i "s/192.168.2/$lan_ip/g" $default_path
         echo "修改Wifi名"
-        sed -i "s/BOARD_PID/$wifi/g" $default_path
+        sed -i 's/#define\s*DEF_WLAN_2G_SSID\s*"_%s"/#define DEF_WLAN_2G_SSID "'$wifi'"/g' $default_path
+        sed -i 's/#define\s*DEF_WLAN_5G_SSID\s*"_5G_%s"/#define DEF_WLAN_5G_SSID "'$wifi_5G'"/g' $default_path
+        sed -i 's/#define\s*DEF_WLAN_2G_GSSID\s*"_GUEST_%s"/#define DEF_WLAN_2G_GSSID "'$wifi_GUEST'"/g' $default_path
+        sed -i 's/#define\s*DEF_WLAN_5G_GSSID\s*"_GUEST_5G_%s"/#define DEF_WLAN_5G_GSSID "'$wifi_GUEST_5G'"/g' $default_path
+
         echo "修改Wifi密码"
         sed -i "s/1234567890/$wifi_password/g" $default_path
         echo "更新版本号时间"
