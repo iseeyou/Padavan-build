@@ -80,6 +80,58 @@ jobs:
         ################################################################################################
         #因不同型号配置功能不一样，所以先把配置项删除，如果你自己要添加其他的，也要写上删除这一条，切记！！！
         ################################################################################################
+        sed -i '/CONFIG_FIRMWARE_ENABLE_USB/d' .config
+        sed -i '/CONFIG_FIRMWARE_ENABLE_UFSD/d' .config
+        sed -i '/CONFIG_FIRMWARE_ENABLE_FAT/d' .config
+        sed -i '/CONFIG_FIRMWARE_ENABLE_EXFAT/d' .config
+        sed -i '/CONFIG_FIRMWARE_ENABLE_EXT2/d' .config
+        sed -i '/CONFIG_FIRMWARE_ENABLE_EXT3/d' .config
+        sed -i '/CONFIG_FIRMWARE_ENABLE_EXT4/d' .config
+        sed -i '/CONFIG_FIRMWARE_ENABLE_XFS/d' .config
+        sed -i '/CONFIG_FIRMWARE_ENABLE_FUSE/d' .config
+        sed -i '/CONFIG_FIRMWARE_ENABLE_SWAP/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_UVC/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_HID/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SERIAL/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_AUDIO/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_XFRM/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_QOS/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_IMQ/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_IFB/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_IPSET/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_NFSD/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_NFSC/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_CIFS/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_NTFS_3G/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_LPRD/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_U2EC/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_TCPDUMP/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_HDPARM/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_PARTED/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD36/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_WINS/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD_SYSLOG/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_FTPD/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_RPL2TP/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_EAP_PEAP/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_DDNS_SSL/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_HTTPS/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SFTP/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_DROPBEAR/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSH/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENVPN/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SSWAN/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_XUPNPD/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_MINIDLNA/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_FIREFLY/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_TRANSMISSION/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_CURL/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT/d' .config
